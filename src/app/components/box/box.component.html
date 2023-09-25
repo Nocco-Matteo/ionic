@@ -1,0 +1,22 @@
+<div>
+  <mat-card class="question-container"
+            *ngIf="sezionePreventivo">
+    <mat-card-header>
+      <mat-card-title>{{ sezionePreventivo.voce }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-radio-button *ngFor="let answer of sezionePreventivo.risposte"
+                        [value]="answer"
+                        (click)="selelzionaRisposta(answer)">
+        {{ answer }}
+      </mat-radio-button>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button
+              color="primary"
+              (click)="sceltaConfermata()"
+              [disabled]="!selectedAnswer">Conferma</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
