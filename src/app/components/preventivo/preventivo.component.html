@@ -1,2 +1,10 @@
+<!-- Mock data -->
+<p><b>Mock data:</b></p>
+<app-box [sezionePreventivo]="mockCurrentSezionePreventivo"
+         (answerSelected)="gestisciRisposta($event,'mock')"></app-box>
+
+<!-- Http reques -->
+<p><b>Http data:</b></p>
+<p>Stato request: {{stato }}</p>
 <app-box [sezionePreventivo]="currentSezionePreventivo"
-         (answerSelected)="gestisciRisposta($event)"></app-box>
+         (answerSelected)="gestisciRisposta($event,'http')"></app-box>

@@ -13,8 +13,10 @@ export class PreventivoService {
   getPreventivi(): Observable<any> {
     const url = "http://149.62.187.197:3000/api/getSezioniPreventivo"
 
-    // return of(mockPreventivi)
     return this.httpClient.get(url)
+  }
+  getMockPreventivi(): Observable<any> {
+    return of(mockPreventivi)
   }
 }
 
